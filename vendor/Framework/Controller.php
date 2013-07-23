@@ -6,7 +6,6 @@ use Framework\Registry;
 
 abstract class Controller
 {
-
     public function __construct()
     {
         $reflector = new \ReflectionClass(get_called_class());

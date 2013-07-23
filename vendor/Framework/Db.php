@@ -22,16 +22,11 @@ class Db extends \PDO
             throw new \Framework\Exception('Database config do not set');
         }
 
-        $options = [
-            \PDO::ATTR_PERSISTENT => true,
-            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
-        ];
-
         return new self(
             self::$config['dsn'],
             self::$config['username'],
             self::$config['password'],
-            $options
+            self::$config['options']
         );
     }
 
